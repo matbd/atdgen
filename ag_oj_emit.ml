@@ -1136,6 +1136,7 @@ and make_tuple_reader deref a =
           `Line "while true do";
           `Block [
             `Line "Yojson.Safe.skip_json p lb;";
+            `Line "Yojson.Safe.read_space p lb;";
             `Line "Yojson.Safe.read_tuple_sep2 p std_tuple lb;";
           ];
           `Line "done";
